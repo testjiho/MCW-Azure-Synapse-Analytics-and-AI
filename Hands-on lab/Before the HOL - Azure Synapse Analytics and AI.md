@@ -111,7 +111,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ### Task 3: Download lab artifacts
 
-1. In the Azure Portal, open the Azure Cloud Shell by selecting its icon from the right side of the top toolbar.
+1. In the Azure Portal, open the Azure Cloud Shell by selecting its icon from the right side of the top toolbar. Be sure to select **Powershell** as the shell type.
 
     ![A portion of the Azure Portal taskbar is displayed with the Cloud Shell icon highlighted.](media/bhol_azurecloudshellmenu.png "Opening the Cloud Shell")
 
