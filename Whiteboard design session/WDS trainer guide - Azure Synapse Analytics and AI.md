@@ -501,7 +501,7 @@ The primary audience is the business decision makers and technology decision mak
 
     ![Diagram illustrating the process for handling streaming data, the "hot path" as described in the text above.](media/preferred-solution-streaming.png "Hot path approach to streaming data")
 
-    The following diagram illustrates the approach the Azure Synapse Analytics enables for WWI with regards to machine learning. WWI could train their machine learning models using notebooks run within Azure Machine Learning or Azure Synapse Spark. They could use their machine learning framework of choice to do so. Within this notebook they would convert the model into the ONNX format and then upload the model to Azure Storage. From there, they would run a T-SQL script in Azure Synapse SQL to load the model into a table in the database. After this, they can use the model within T-SQL scripts running Azure Synapse SQL by loading the model from the table, and using it with the Predict function to score data sourced from a table in the database. The scored results could then be used directly or be inserted into a target table for later querying of the predictions.
+    The following diagram illustrates the approach the Azure Synapse Analytics enables for WWI with regards to machine learning. WWI could train their machine learning models using notebooks run within Azure Machine Learning or Azure Synapse Spark. They could use their machine learning framework of choice to do so. Within this notebook they would convert the model into the ONNX format and then upload the model to Azure Storage. From there, they would run a T-SQL script in Azure Synapse SQL to load the model into a table in the database. After this, they can use the model within T-SQL scripts running Azure Synapse SQL by loading the model from the table, and using it with the Predict function to score data sourced from a table in the database. The scored results could then be used directly or be inserted into a target table for later querying of the predictions. Alternatively, they can also expose their model with a Web Service running in Kubernetes or ACI.
 
     ![Diagram illustrating the machine learning approach as described in the text above.](media/preferred-solution-machine-learning.png "Azure Synapse Analytics model in regards to machine learning")
 
@@ -514,7 +514,7 @@ The primary audience is the business decision makers and technology decision mak
 2. What storage service would you recommend they use and how would you recommend they structure the folders so they can manage the data at the various levels of refinement?
 
     They should use Azure Data Lake Store (ADLS) Gen2 (Azure Storage with hierarchical file systems).
- 
+
     In ADLS, it is a best practice to have a dedicated Storage Account for production, and a separate Storage Account for dev and test workloads. This will ensure that dev or test workloads never interfere with production.  
 
     One common folder structure is to organize the data in separate folders by degree of refinement. For example a bronze folder contains the raw data, silver contains the cleaned, prepared and integrated data and gold contains data ready to support analytics, which might include final refinements such as pre-computed aggregates.
