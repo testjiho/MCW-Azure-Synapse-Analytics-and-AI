@@ -62,7 +62,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 1: Create a SQL Datastore and source Dataset](#task-1-create-a-sql-datastore-and-source-dataset)
     - [Task 2: Create compute infrastructure](#task-2-create-compute-infrastructure)
     - [Task 3: Use a notebook in AML Studio to prepare data and create a Product Seasonality Classifier model using XGBoost](#task-3-use-a-notebook-in-aml-studio-to-prepare-data-and-create-a-product-seasonality-classifier-model-using-xgboost)
-    - [Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifer model](#task-4-leverage-automated-ml-to-create-and-deploy-a-product-seasonality-classifer-model)
+    - [Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifier model](#task-4-leverage-automated-ml-to-create-and-deploy-a-product-seasonality-classifier-model)
   - [Exercise 8: Monitoring](#exercise-8-monitoring)
     - [Task 1: Workload importance](#task-1-workload-importance)
     - [Task 2: Workload isolation](#task-2-workload-isolation)
@@ -1132,7 +1132,7 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
     ![The left side navigation is shown with the Keys and Endpoint item highlighted.](media/ex5-task2a-04.png "Left menu navigation")
 
-6. Copy and Paste both **KEY 1** and the **ENDPOINT** values. Put these in the same location as the storage connection string you copied earlier
+6. Copy and Paste both **KEY 1** and the **ENDPOINT** values. Put these in the same location as the storage connection string you copied earlier.
 
     ![The Keys and Endpoint screen is shown with KEY 1 and ENDPOINT values highlighted.](media/ex5-task2a-05.png "The Keys and Endpoint screen")
 
@@ -1869,7 +1869,7 @@ In this exercise, you will create multiple machine learning models. You will lea
 
 >**Note**: Running this notebook in its entirety is required for the next task.
 
-### Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifer model
+### Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifier model
 
 1. In Azure Machine Learning (AML) Studio, select **Experiments** from the left menu, then expand the **+ Create** button, and select **Automated ML run**.
 
