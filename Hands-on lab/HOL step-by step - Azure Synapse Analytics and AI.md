@@ -59,7 +59,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 2: Row level security](#task-2-row-level-security)
     - [Task 3: Dynamic data masking](#task-3-dynamic-data-masking)
   - [Exercise 7: Machine Learning](#exercise-7-machine-learning)
-    - [Task 1: Training, consuming, and deploying models](#task-1-training-consuming-and-deploying-models)
+    - [Task 1: Create a SQL Datastore and source Dataset](#task-1-create-a-sql-datastore-and-source-dataset)
+    - [Task 2: Create compute infrastructure](#task-2-create-compute-infrastructure)
+    - [Task 3: Use a notebook in AML Studio to prepare data and create a Product Seasonality Classifier model using XGBoost](#task-3-use-a-notebook-in-aml-studio-to-prepare-data-and-create-a-product-seasonality-classifier-model-using-xgboost)
+    - [Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifer model](#task-4-leverage-automated-ml-to-create-and-deploy-a-product-seasonality-classifer-model)
   - [Exercise 8: Monitoring](#exercise-8-monitoring)
     - [Task 1: Workload importance](#task-1-workload-importance)
     - [Task 2: Workload isolation](#task-2-workload-isolation)
@@ -1812,7 +1815,7 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The dataset Confirm details screen is displayed showing a summary of the choices from the previous steps.](media/aml_dataset_confirmdetails.png "The dataset Confirm details screen")
 
-### Task 2: Create a compute instance to service Notebooks
+### Task 2: Create compute infrastructure
 
 1. From the left menu of Machine Learning Studio, select **Compute**.
 
@@ -1830,11 +1833,89 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The new compute instance form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance form")
 
+4. Select the **Compute clusters** tab, and select **Create**.
+
+5. On the **New compute cluster** form, configure the cluster as follows, then select **Create**:
+
+    | Field | Value |
+    |--------------|---------------|
+    | Compute name | automlcluster |
+    | Virtual machine type | CPU (Central Processing Unit) |
+    | Virtual machine priority | Dedicated |
+    | Virtual machine size | Standard_DS3_v2 |
+    | Minimum number of nodes | 0 |
+    | Maximum number of nodes | 3 |
+    | Idle seconds before scale down | 120 |
+
+    ![The New compute cluster form is displayed with the preceding values.](media/aml_cluster_settings.png "The New compute cluster form")
+
 ### Task 3: Use a notebook in AML Studio to prepare data and create a Product Seasonality Classifier model using XGBoost
 
-Open and run the saved ipynb.
+1. In Azure Machine Learning (AML) Studio, select **Notebooks** from the left menu.
+
+2. In the **Notebooks** pane, select the **Upload** icon from the toolbar.
+
+    ![In Azure Machine Learning Studio, the Notebooks item is selected from the left menu, and the Upload Icon is highlighted in the Notebooks panel.](media/aml_uploadnotebook_menu.png "Upload notebook")
+
+3. In the **Open** dialog, select **Hands-on lab/artifacts/ProductSeasonality_sklearn.ipynb**. When prompted, check the boxes to **Overwrite if already exists** and **I trust contents of this file** and select **Upload**.
+
+    ![A dialog is displayed with the Overwrite if already exists and the I trust contents of this file checkboxes checked.](media/aml_notebook_uploadwarning.png "File upload warning dialog")
+
+4. In the top toolbar of the notebook, expand the **Jupyter** item, and select **Edit in Jupyter**.
+
+    ![On the notebook toolbar, the Jupyter item is expanded with the Edit in Jupyter item selected.](media/aml_notebook_editinjupyter.png "Edit in Jupyter")
+
+5. Review and run each cell in the notebook individually to gain understanding of the functionality being demonstrated.
+
+>**Note**: Running this notebook in its entirety is required for the next task.
 
 ### Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifer model
+
+1. In Azure Machine Learning (AML) Studio, select **Experiments** from the left menu, then expand the **+ Create** button, and select **Automated ML run**.
+
+    ![The AML Studio Experiments screen is shown with the Create button expanded and the Automated ML run item selected.](media/aml_experiment_create.png "The AML Studio Experiments screen")
+
+2. In the previous task, we registered our PCA dataframe (named **pcadata**) to use with Auto ML. Select **pcadata** from the list and select **Next**.
+
+    ![On the Select dataset screen, the pcadata item is selected from the dataset list.](media/aml_automl_datasetselection.png "The select dataset form is displayed")
+
+3. On the **Configure run** screen, select the **Create a new compute** link beneath the **Select compute cluster** field.
+
+4. Back on the **Configure run** form, name the experiment **ProductSeasonalityClassifier**, select **Seasonality** as the **Target column** and select **automlcluster** as the compute cluster. Select **Next**.
+
+    ![The Configure run form is displayed populated with the preceding values.](media/automl_experiment_configurerun.png "The Configure run form")
+
+5. On the **Select task type** screen, select **Classification**, then choose **Finish**.
+
+    ![The Select task type screen is displayed with the Classification item selected.](media/aml_automlrun_tasktypeform.png "The Select task type screen")
+
+6. The experiment will then be run. It will take approximately 20-25 minutes for it to complete. Once it has completed, it will display the run results details. In the **Best model summary** box, select the **Algorithm name** link.
+
+    ![The Run is shown as completed and the link below Algorithm name in the Best model summary box is selected.](media/aml_automl_run_bestmodel_details.png "Completed AutoML run details")
+
+7. On the Model run screen, select **Deploy** from the top toolbar.
+
+    ![The specific model run screen is shown with the Deploy button selected from the top toolbar.](media/aml_automl_deploybestmodel.png "The best model run")
+
+8. On the **Deploy a model** blade, configure the deployment as follows, then select **Deploy**:
+
+    | Field | Value |
+    |--------------|---------------|
+    | Name | productseasonalityclassifier |
+    | Description | Product Seasonality Classifier. |
+    | Compute type | Azure Container Instance |
+    | Virtual machine size | Standard_DS3_v2 |
+    | Enable authentication | Off |
+
+    ![The Deploy a model blade is shown populated with the preceding values.](media/aml_automl_deploymodelaci.png "The Deploy a model blade")
+
+9. Once deployed, the Model summary will be displayed. You can view the endpoint by selecting the **Deploy status** link.
+
+    ![The successful model deployment was successful and the Deploy status link is highlighted.](media/aml_automl_modeldeploysuccess.png "The Model summary screen")
+
+10. Review the details of the deployed model service endpoint.
+
+    ![The service endpoint details screen is displayed.](media/aml_automl_modelserviceendpointdetails.png "The service endpoint details screen")
 
 ## Exercise 8: Monitoring
 
