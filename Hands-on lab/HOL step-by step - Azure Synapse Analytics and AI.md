@@ -1746,7 +1746,7 @@ Using Azure Synapse Analytics, data scientists are no longer required to use sep
 
 In this exercise, you will create multiple machine learning models. You will learn how to consume these models in your notebook. You will also deploy a model as a web service to Azure Container Instances and consume the service.
 
-### Task 1: Training, consuming, and deploying models
+### Task 1: Create a SQL Datastore and source Dataset
 
 1. Open the lab resource group, locate and open the **amlworkspace{{suffix}}** Machine Learning resource.
 
@@ -1777,13 +1777,50 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The new datastore blade is shown populated with the preceding values.](media/amlstudio_sqlpooldatasource.png "New datastore blade")
 
-6. From the left menu of Machine Learning Studio, select **Compute**.
+6. From the left menu, select **Datasets**, and with the **Registered datasets** tab selected, expand the **+ Create dataset** button and select **From datastore**.
 
-7. On the **Compute** screen with the **Compute instances** tab selected. Choose the **Create** button.
+    ![The Datasets screen is displayed with the +Create dataset button highlighted.](media/createfirstamldataset.png "AML Studio Datasets screen")
+
+7. In the **Create dataset from datastore** Basic info form, name the dataset **AggregatedProductSeasonality** and select **Next**.
+
+    ![The basic info form is displayed populated with the preceding values.](media/createdataset_basicinfo.png "Dataset basic info form")
+
+8. On the **Datastore selection** form, select **Previously created datasource**, choose **sqlpool01** from the list and select the **Select datasource** button.
+
+    ![The Datastore selection form is displayed as described above.](media/amldatasetselectdatasource.png "The Datastore selection form")
+
+9. In the next **Datastore selection** form, enter the following **SQL query** and then select **Next**:
+
+    ```sql
+    SELECT  P.ProductId,P.Seasonality,S.TransactionDateId,COUNT(*) as TransactionItemsCount
+    FROM wwi_mcw.SaleSmall S
+    JOIN wwi_mcw.Product P ON S.ProductId = P.ProductId
+    GROUP BY P.ProductId ,P.Seasonality,S.TransactionDateId
+    ```
+
+    ![The datastore selection form is displayed populated with the preceding query.](media/aml_dataset_datastoreselectionquery.png "Dataset query details")
+
+10. The **Settings and preview** data table will be displayed after a few moments. Review this data, then select the **Next** button.
+
+    ![The settings and preview screen is displayed showing a table of data.](media/amlstudio_dataset_settingsandpreview.png "The Settings and Preview screen")
+
+11. Review the **Schema** field listing, then select **Next**.
+
+    ![The Schema screen is displayed showing a listing of columns and their types.](media/amlstudio_dataset_schema.png "The dataset Schema field listing")
+
+12. On the **Confirm details** screen, select **Create**.
+
+    ![The dataset Confirm details screen is displayed showing a summary of the choices from the previous steps.](media/aml_dataset_confirmdetails.png "The dataset Confirm details screen")
+
+### Task 2: Create a compute instance to service Notebooks
+
+1. From the left menu of Machine Learning Studio, select **Compute**.
+
+2. On the **Compute** screen with the **Compute instances** tab selected. Choose the **Create** button.
 
     ![The Azure Machine Learning Studio compute screen is displayed, with the compute instances tab selected, and the Create button highlighted.](media/aml_createcomputebutton.png "Azure Machine Learning Compute screen")
 
-8. On the **New compute instance** blade, configure it as follows, then select **Create**:
+3. On the **New compute instance** blade, configure it as follows, then select **Create**:
 
     | Field | Value |
     |--------------|---------------|
@@ -1792,6 +1829,12 @@ In this exercise, you will create multiple machine learning models. You will lea
     | Virtual machine size | Standard_DS3_v2 |
 
     ![The new compute instance form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance form")
+
+### Task 3: Use a notebook in AML Studio to prepare data and create a Product Seasonality Classifier model using XGBoost
+
+Open and run the saved ipynb.
+
+### Task 4: Leverage Automated ML to create and deploy a Product Seasonality Classifer model
 
 ## Exercise 8: Monitoring
 
