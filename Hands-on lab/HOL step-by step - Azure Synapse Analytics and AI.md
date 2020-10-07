@@ -1744,23 +1744,54 @@ As an alternative to column level security, SQL Administrators also have the opt
 
 Using Azure Synapse Analytics, data scientists are no longer required to use separate tooling to create and deploy machine learning models.
 
-In this exercise, you will create multiple machine learning models. You will learn how to consume these models in your notebook. You will also deploy a model as a web service to Azure Container Instances and consume the service - without ever having to leave the Azure Synapse Analytics workspace.
+In this exercise, you will create multiple machine learning models. You will learn how to consume these models in your notebook. You will also deploy a model as a web service to Azure Container Instances and consume the service.
 
 ### Task 1: Training, consuming, and deploying models
 
-1. Open the **ASAMCW - Exercise 7 - Machine Learning** notebook (select **Develop** from the left menu, from the **Develop** menu, expand the **Notebooks** section and select the notebook)
+1. Open the lab resource group, locate and open the **amlworkspace{{suffix}}** Machine Learning resource.
 
-2. Run the notebook step by step (DO NOT `RUN ALL`) to complete this exercise. Some of the most important tasks you will perform are:
+    ![The lab resource group is shown with the Machine Learning resource selected](media/resourcelist_amlstudio.png "Machine learning resource")
 
-- Exploratory data analysis (basic stats)
-- Use PCA for dimensionality reduction
-- Train ensemble of trees classifier (using XGBoost)
-- Train classifier using Auto ML
-- Register the best run model
-- Deploy the model as a web service to Azure Container Instances
-- Consume the web service to make predictions on sample data
-  
-> **Note**: Please note that each of these tasks will be addressed through several cells in the notebook.
+2. On the **Overview** screen of the Machine Learning resource, select the **Studio web URL** link.
+
+    ![The machine learning resource overview screen is selected with the Studio web URL link highlighted.](media/machinelearning_overview.png "Machine learning overview screen")
+
+3. From the left menu of **Azure Machine Learning Studio**, select the **Datastores** item.
+
+    ![The Machine Learning Studio menu is shown with the Datastores item highlighted](media/amlstudio_datastores_menu.png "AML Studio menu")
+
+4. On the **Datastores** screen top menu, select **+ New datastore**.
+
+5. On the **New datastore** blade, configure it as follows and select **Create**:
+
+    | Field | Value |
+    |--------------|---------------|
+    | New datastore (name) | sqlpool01 |
+    | Datastore type | Azure SQL database |
+    | Account selection method | From Azure subscription |
+    | Subscription ID | Select the lab subscription. |
+    | Server name / database name  | Select asaworkspace{{suffix}}/SQLPool01. |
+    | Authentication type | SQL authentication |
+    | User ID | asa.sql.admin |
+    | Password | The SQL Admin password you chose when deploying the lab resources. |
+
+    ![The new datastore blade is shown populated with the preceding values.](media/amlstudio_sqlpooldatasource.png "New datastore blade")
+
+6. From the left menu of Machine Learning Studio, select **Compute**.
+
+7. On the **Compute** screen with the **Compute instances** tab selected. Choose the **Create** button.
+
+    ![The Azure Machine Learning Studio compute screen is displayed, with the compute instances tab selected, and the Create button highlighted.](media/aml_createcomputebutton.png "Azure Machine Learning Compute screen")
+
+8. On the **New compute instance** blade, configure it as follows, then select **Create**:
+
+    | Field | Value |
+    |--------------|---------------|
+    | Compute name | Globally unique value of your choice. |
+    | Virtual machine type | CPU (Central Processing Unit) |
+    | Virtual machine size | Standard_DS3_v2 |
+
+    ![The new compute instance form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance form")
 
 ## Exercise 8: Monitoring
 
