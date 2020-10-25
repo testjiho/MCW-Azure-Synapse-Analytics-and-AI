@@ -103,9 +103,11 @@ This lab explores the cold data scenario of ingesting various types of raw data 
 
 6. [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-7. [Azure Functions Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+7. [Azure Function Core Tools v.3](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#v2)
 
-8. [Postman](https://www.postman.com/downloads/)
+8. [Azure Functions Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+
+9. [Postman](https://www.postman.com/downloads/)
 
 ## Before the hands-on lab
 
@@ -1283,9 +1285,11 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
     ![The Edit Collection Variables screen is shown with a sampling of modified values.](media/ex5-task3-014.png "The Edit Collection Values screen")
 
-18. Expand the **Create a KnowledgeStore** collection, and select the **Create Index** call, then select the **Body** tab and review the content.
+18. Expand the **Create a KnowledgeStore** collection, and select the **Create Index** call, then select the **Body** tab and review the content. For this call, and every subsequent call from Postman - ensure the Content Type is set to **JSON**.
 
     ![The Create Index call is selected from the collection, and the Body tab is highlighted.](media/ex5-task3-015.png "The Create Index Call")
+
+    ![The Postman Body tab is selected with the JSON item highlighted.](media/postman_jsoncontenttype.png "The Postman Body tab")
 
 19. Select "Send".
 

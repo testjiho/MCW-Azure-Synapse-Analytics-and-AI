@@ -53,9 +53,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 5. [Python Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
-6. [Azure Functions Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+6. [Azure Function Core Tools v.3](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#v2)
 
-7. [Postman](https://www.postman.com/downloads/)
+7. [Azure Functions Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+
+8. [Postman](https://www.postman.com/downloads/)
 
 ## Before the hands-on lab
 
