@@ -221,7 +221,6 @@ foreach ($notebookName in $notebooks.Keys)
         
         $result = Create-SparkNotebook -TemplatesPath $templatesPath -SubscriptionId $subscriptionId -ResourceGroupName $resourceGroupName `
                 -WorkspaceName $workspaceName -SparkPoolName $sparkPoolName -Name $notebookName -NotebookFileName $notebookFileName -CellParams $cellParams
-        $result = Wait-ForOperation -WorkspaceName $workspaceName -OperationId $result.operationId
         $result
 }
 
