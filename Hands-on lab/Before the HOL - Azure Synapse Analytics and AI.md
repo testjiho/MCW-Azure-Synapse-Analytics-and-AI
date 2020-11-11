@@ -106,6 +106,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 2. On the **Custom deployment** form, select your desired subscription and select **Synapse-MCW** for the **Resource group**. Also provide a **Unique Suffix** such as your initials followed by birth year. Finally, provide a strong **SQL Administrator Login Password**. Remember this password value, you'll need it later!
 
     ![The Custom deployment form is displayed with example data populated.](media/bhol_customdeploymentform.png "Configuring the custom deployment")
+
+    >**Note**: Password requirements are as follows:
+    >
+    >   1. Your password must be between 8 and 128 characters long.
+    >   2. Your password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers (0-9), and non-alphanumeric characters (!, $, #, %, etc.).
+    >   3. Your password cannot contain all or part of the login name. Part of a login name is defined as three or more consecutive alphanumeric characters.
   
 3. Check the **I agree to the terms and conditions stated above**, then select the **Purchase** button.
 
