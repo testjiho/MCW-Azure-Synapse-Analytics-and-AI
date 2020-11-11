@@ -1985,7 +1985,7 @@ Setting importance in Synapse SQL for Azure Synapse allows you to influence the 
 
 7. Select the `Integrate` item from the left menu.
 
-8. **Run** the **Exercise 8 - Execute Data Analyst and CEO Queries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries. You can run the pipeline with the Debug option if you have an instance of the Integration Runtime running.
+8. **Run** the **Exercise 8 - ExecuteDataAnalystandCEOQueries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries. You can run the pipeline with the Debug option if you have an instance of the Integration Runtime running.
 
 9. Select **Add trigger**, then **Trigger now**. In the dialog that appears, select **OK**. **Let this pipeline run for 30 seconds to 1 minute, then proceed to the next step**.
 
@@ -2029,7 +2029,7 @@ Setting importance in Synapse SQL for Azure Synapse allows you to influence the 
 
     - **Select** the `Integrate` item from the left menu.
 
-    - **Run** the **Exercise 8 - Execute Data Analyst and CEO Queries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries.
+    - **Run** the **Exercise 8 - ExecuteDataAnalystandCEOQueries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries.
 
 17. In the query window, replace the script with the following to see what happens to the `asa.sql.workload01` queries this time:
 
