@@ -1918,7 +1918,6 @@ In this exercise, you will create multiple machine learning models. You will lea
     | Name | productseasonalityclassifier |
     | Description | Product Seasonality Classifier. |
     | Compute type | Azure Container Instance |
-    | Virtual machine size | Standard_DS3_v2 |
     | Enable authentication | Off |
 
     ![The Deploy a model blade is shown populated with the preceding values.](media/aml_automl_deploymodelaci.png "The Deploy a model blade")
