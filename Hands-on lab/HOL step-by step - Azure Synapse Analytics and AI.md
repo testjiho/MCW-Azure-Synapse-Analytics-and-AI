@@ -275,7 +275,7 @@ The data that we will be retrieving to populate the sale table is currently stor
    | Import schema | **From connection/store** |
 
     ![The Set properties blade is populated with the values specified in the preceding table.](media/dataset_saleasaform.png "Dataset form")
-  
+
 10. In the top toolbar, select **Publish all** to publish the new dataset definitions. When prompted, select the **Publish** button to deploy the changes to the workspace.
 
     ![The top toolbar is displayed with the Publish all button highlighted.](media/publishall_toolbarmenu.png "Publish changes")
@@ -340,7 +340,7 @@ The data that we will be retrieving to populate the sale table is currently stor
 
     ![The top toolbar is displayed with the Publish all button highlighted.](media/publishall_toolbarmenu.png "Publishing changes")
 
-20. We can now use this data flow as an activity in a pipeline. Create a new pipeline by selecting **Orchestrate** from the left menu, and in the **Orchestrate** blade, expand the **+** button and select **Pipeline**.
+20. We can now use this data flow as an activity in a pipeline. Create a new pipeline by selecting **Integrate** from the left menu, and in the **Integrate** blade, expand the **+** button and select **Pipeline**.
 
 21. On the **Properties** blade, Enter **ASAMCW - Exercise 2 - Copy Sale Data** as the Name of the pipeline.
 
@@ -369,9 +369,9 @@ The data that we will be retrieving to populate the sale table is currently stor
 
 26. Once published, expand the **Add trigger** item on the pipeline designer toolbar, and select **Trigger now**. In the **Pipeline run** blade, select **OK** to proceed with the latest published configuration. You will see notification toast windows indicating the pipeline is running and when it has completed.
 
-27. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Sale Data** pipeline in the Orchestrate blade. Expand the actions menu, and select the **Monitor** item.
+27. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Sale Data** pipeline in the Integrate blade. Expand the actions menu, and select the **Monitor** item.
 
-    ![In the Orchestrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Sale Data pipeline.](media/orchestrate_pipeline_monitor_copysaledata.png "Monitoring a pipeline")
+    ![In the Integrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Sale Data pipeline.](media/orchestrate_pipeline_monitor_copysaledata.png "Monitoring a pipeline")
   
 28. You should see a run of the pipeline we created in the **Pipeline runs** table showing as in progress. It will take approximately 45 minutes for this pipeline operation to complete. You will need to refresh this table from time to time to see updated progress. Once it has completed. You should see the pipeline run displayed with a Status of **Succeeded**.
 
@@ -471,9 +471,9 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 
     ![The top toolbar is displayed with the Publish all button highlighted.](media/publishall_toolbarmenu.png "Publishing changes")
 
-9. Next, we will define a pipeline to populate data into the CustomerInfo table. From the left menu, select **Orchestrate**. From the Orchestrate blade, select the **+** button and select the **Pipeline** item.
+9. Next, we will define a pipeline to populate data into the CustomerInfo table. From the left menu, select **Integrate**. From the Integrate blade, select the **+** button and select the **Pipeline** item.
 
-    ![The Orchestrate menu item is selected from the left menu. On the Orchestrate blade, the + button is expanded with the Pipeline item highlighted.](media/orchestrate_newpipelinemenu.png "The Orchestrate Hub")
+    ![The Integrate menu item is selected from the left menu. On the Integrate blade, the + button is expanded with the Pipeline item highlighted.](media/orchestrate_newpipelinemenu.png "The Integrate Hub")
 
 10. In the **Properties** blade, enter **ASAMCW - Exercise 2 - Copy Customer Information** in the **Name** field.
 
@@ -509,9 +509,9 @@ Over the past 5 years, Wide World Importers has amassed over 3 billion rows of s
 
 17. Once published, expand the **Add trigger** item on the pipeline designer toolbar, and select **Trigger now**. In the **Pipeline run** blade, select **OK** to proceed with the latest published configuration. You will see notification toast windows indicating the pipeline is running and when it has completed.
 
-18. View the status of the completed run by locating the **ASAMCW - Exercise 2 - Copy Customer Information** pipeline in the Orchestrate blade. Expand the actions menu, and select the **Monitor** item.
+18. View the status of the completed run by locating the **ASAMCW - Exercise 2 - Copy Customer Information** pipeline in the Integrate blade. Expand the actions menu, and select the **Monitor** item.
 
-    ![In the Orchestrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Customer Information pipeline.](media/pipeline_copycustomerinformation_monitormenu.png "Monitoring the pipeline")
+    ![In the Integrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Customer Information pipeline.](media/pipeline_copycustomerinformation_monitormenu.png "Monitoring the pipeline")
   
 19. You should see a successful run of the pipeline we created in the **Pipeline runs** table.
   
@@ -750,7 +750,7 @@ Similar to the customer information table, we will also be populating the campai
 
     ![Publish all is highlighted.](media/publishall_toolbarmenu.png "Publish all")
 
-28. Now that the data flow is published, we can use it in a pipeline. Create a new pipeline by selecting **Orchestrate** from the left menu, then in the **Orchestrate** blade, expand the **+** button and select **Pipeline**.
+28. Now that the data flow is published, we can use it in a pipeline. Create a new pipeline by selecting **Integrate** from the left menu, then in the **Integrate** blade, expand the **+** button and select **Pipeline**.
 
 29. In the **Properties** pane on the right side of the pipeline designer. Enter **ASAMCW - Exercise 2 - Copy Campaign Analytics Data** in the **Name** field.
 
@@ -779,9 +779,9 @@ Similar to the customer information table, we will also be populating the campai
 
 34. Once published, expand the **Add trigger** item on the pipeline designer toolbar, and select **Trigger now**. In the **Pipeline run** blade, select **OK** to proceed with the latest published configuration. You will see notification toast window indicating the pipeline is running and when it has completed.
 
-35. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Campaign Analytics Data** pipeline in the Orchestrate blade. Expand the actions menu, and select the **Monitor** item.
+35. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Campaign Analytics Data** pipeline in the Integrate blade. Expand the actions menu, and select the **Monitor** item.
 
-    ![In the Orchestrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Campaign Analytics Data pipeline.](media/orchestrate_pipeline_monitor_copycampaigndata.png "Monitoring the pipeline run")
+    ![In the Integrate blade, the Action menu is displayed with the Monitor item selected on the ASAMCW - Exercise 2 - Copy Campaign Analytics Data pipeline.](media/orchestrate_pipeline_monitor_copycampaigndata.png "Monitoring the pipeline run")
 
 36. You should see a run of the pipeline we created in the **Pipeline runs** table showing as in progress. You will need to refresh this table from time to time to see updated progress. Once it has completed. You should see the pipeline run displayed with a Status of **Succeeded**.
 
@@ -795,11 +795,11 @@ Similar to the customer information table, we will also be populating the campai
 
 When the lab environment was provisioned, the **wwi_mcw.Product** table and datasets required for its population were created. Throughout this exercise, you have gained experience creating datasets, data flows, and pipelines. The population of the product table would be repetitive, so we will simply trigger an existing pipeline to populate this table.
 
-1. From the left menu, select **Orchestrate**. From the **Orchestrate** blade, expand the **Pipelines** section and locate and select the **ASAMCW - Exercise 2 - Copy Product Information** pipeline.
+1. From the left menu, select **Integrate**. From the **Integrate** blade, expand the **Pipelines** section and locate and select the **ASAMCW - Exercise 2 - Copy Product Information** pipeline.
 
 2. Expand the **Add trigger** item on the pipeline designer toolbar, and select **Trigger now**. In the **Pipeline run** blade, select **OK** to proceed with the latest published configuration. You will see notification toast windows indicating the pipeline is running and when it has completed.
 
-3. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Product Information** pipeline in the Orchestrate blade. Expand the actions menu, and select the **Monitor** item.
+3. View the status of the pipeline run by locating the **ASAMCW - Exercise 2 - Copy Product Information** pipeline in the Integrate blade. Expand the actions menu, and select the **Monitor** item.
 
 4. You should see a run of the pipeline we created in the **Pipeline runs** table showing as in progress (or succeeded). Once it has completed. You should see the pipeline run displayed with a Status of **Succeeded**.
 
@@ -833,9 +833,9 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
     ![The Storage accounts section is expanded with the context menu visible on the asadatalake{SUFFIX} account with the Select TOP 100 rows option highlighted.](media/data-hub-parquet-select-rows.png "Querying parquet data in SQL Serverless")
 
-5. Ensure **SQL on-demand** is selected in the **Connect to** dropdown list above the query window, then run the query. Data is loaded by the Synapse SQL Serverless endpoint and processed as if was coming from any regular relational database.
+5. Ensure the **Built-in** Synapse SQL Serverless pool is selected in the **Connect to** dropdown list above the query window, then run the query. Data is loaded by the Synapse SQL Serverless endpoint and processed as if was coming from any regular relational database.
 
-    ![The SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
+    ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
 
 6. Modify the SQL query to perform aggregates and grouping operations to better understand the data. Replace the query with the following, making sure that the file path in **OPENROWSET** matches your current file path, be sure to substitute `asadatalake{SUFFIX}` for the appropriate value in your environment:
 
@@ -872,9 +872,9 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 
 ### Task 2: Query sales Parquet data with Azure Synapse Spark
 
-1. Select **Data** from the left menu, select the **Linked** tab, then browse to the data lake storage account `asadatalake{SUFFIX}` to  **wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231**, then right-click the Parquet file and select New notebook.
+1. Select **Data** from the left menu, select the **Linked** tab, then browse to the data lake storage account `asadatalake{SUFFIX}` to  **wwi-02/sale-small/Year=2010/Quarter=Q4/Month=12/Day=20101231**, then right-click the Parquet file and select **New notebook** then **Load to DataFrame**.
 
-    ![The Parquet file is displayed with the New notebook menu item highlighted.](media/new-spark-notebook-sales.png "New notebook")
+    ![The Parquet file is displayed with the New notebook and Load to DataFrame menu items highlighted.](media/new-spark-notebook-sales.png "New notebook")
 
 2. This will generate a notebook with PySpark code to load the data in a dataframe and display 100 rows with the header.
 
@@ -895,7 +895,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
 6. The Spark engine can analyze the Parquet files and infer the schema. To do this, enter the following in the new cell:
 
     ```python
-    data_path.printSchema()
+    df.printSchema()
     ```
 
     Your output should look like the following:
@@ -922,7 +922,7 @@ When you query Parquet files using Synapse SQL Serverless, you can explore the d
     from pyspark.sql.types import *
     from pyspark.sql.functions import *
 
-    profitByDateProduct = (data_path.groupBy("TransactionDate", "ProductId")
+    profitByDateProduct = (df.groupBy("TransactionDate", "ProductId")
     .agg(
     round(sum("ProfitAmount"),2).alias("(sum)Profit"),
     round(avg("ProfitAmount"),2).alias("(avg)Profit"),
@@ -944,9 +944,9 @@ A common format for exporting and storing data is with text based files. These c
 
 1. Create a new SQL script by selecting **Develop** from the left menu, then in the **Develop** blade, expanding the **+** button and selecting **SQL script**.
 
-2. Ensure **SQL on-demand** is selected in the **Connect to** dropdown list above the query window.
+2. Ensure **Built-in** is selected in the **Connect to** dropdown list above the query window.
 
-    ![The SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
+    ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
 
 3. In this scenario, we will be querying into the CSV file that was used to populate the product table. This file is located in the `asadatalake{SUFFIX}` account at: **wwi-02/data-generators/generator-product.csv**. We will select all data from this file. Copy and paste the following query into the query window and select **Run** from the query window toolbar menu. Remember to replace `asadatalake{SUFFIX}` with your storage account name.
 
@@ -1002,9 +1002,9 @@ A common format for exporting and storing data is with text based files. These c
 
 1. Create a new SQL script by selecting **Develop** from the left menu, then in the **Develop** blade, expanding the **+** button and selecting **SQL script**.
 
-2. Ensure **SQL on-demand** is selected in the **Connect to** dropdown list above the query window.
+2. Ensure **Built-in** is selected in the **Connect to** dropdown list above the query window.
 
-    ![The SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
+    ![The Built-in SQL on-demand connection is highlighted on the query window toolbar.](media/sql-on-demand-selected.png "SQL on-demand")
 
 3. Replace the query with the following, remember to replace `asadatalake{SUFFIX}` with the name of your storage account:
 
@@ -1166,13 +1166,13 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
 15. From the **File** menu, select **Open file** then choose to open **Hands-on lab/artifacts/pocformreader.py**.
 
-16. Update Lines 7, 9, and 17 with the appropriate values indicated below:
+16. Update Lines 8, 10, and 18 with the appropriate values indicated below:
 
-    - Line 7: The endpoint of Form Recognizer Service.
+    - Line 8: The endpoint of Form Recognizer Service.
 
-    - Line 9: The Blob Service SAS URL storage account with your Train and Test invoice folders.
+    - Line 10: The Blob Service SAS URL storage account with your Train and Test invoice folders.
 
-    - Line 17: The KEY1 value for your Form Recognizer Service.
+    - Line 18: The KEY1 value for your Form Recognizer Service.
 
     ![The source code listing of pocformreader.py is displayed with the lines mentioned above highlighted.](media/ex5-task2a-06.png "The source listing of pocofrmreader.py")
 
@@ -1186,9 +1186,9 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
     ![The Debug Configuration selection is shown with Python File - Debug the currently active Python File highlighted.](media/ex5-task2a-08.png "Debug Configuration selection")
 
-20. When it completes, you should see an output similar to what is seen in the screenshot below. The output should also contain a modelID. Copy and paste this into your text file to use later
+20. This process will take a few minutes to complete. When it completes, you should see an output similar to what is seen in the screenshot below. The output should also contain a modelId. Copy and paste this value into your text file to use later
 
-    ![A sample output of the python script is shown with a modelID value highlighted.](media/ex5-task2a-09.png "Visual Studio Code output window")
+    ![A sample output of the python script is shown with a modelId value highlighted.](media/ex5-task2a-09.png "Visual Studio Code output window")
 
     >**Note**: If you receive an error stating the **requests** module is not found, from the terminal window in Visual Studio code, execute: **pip install requests**
 
@@ -1212,7 +1212,7 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
     - If prompted for a subscription, select the same subscription as your Synapse workspace.
 
-    - For the folder to deploy, select **GetInvoiceData**.
+    - If prompted for the folder to deploy, select **GetInvoiceData**.
   
     - Choose to **+ Create new Function App in Azure...** (the first one).
 
@@ -1343,11 +1343,11 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
    ![The top toolbar menu is displayed with the Discard all button highlighted.](media/toptoolbar_discardall.png "Discard changes")
 
-6. Select the **Orchestrate** hub from the left navigation.
+6. Select the **Integrate** hub from the left navigation.
 
-    ![The Orchestrate hub is selected from the left navigation.](media/ex5-task4-012.png "The Orchestrate hub")
+    ![The Integrate hub is selected from the left navigation.](media/ex5-task4-012.png "The Integrate hub")
 
-7. In the Orchestrate blade, expand the **+** button and then select **Pipeline** to create a new pipeline.
+7. In the Integrate blade, expand the **+** button and then select **Pipeline** to create a new pipeline.
 
     ![The + button is expanded with the pipeline option selected.](media/ex5-task4-013.png "Create a new pipeline")
 
@@ -1796,7 +1796,7 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The Datastore selection form is displayed as described above.](media/amldatasetselectdatasource.png "The Datastore selection form")
 
-9. In the next **Datastore selection** form, enter the following **SQL query** and then select **Next**:
+9. In the next **Datastore selection** form, enter the following **SQL query**. Then expand the **Advanced settings** and enter **100** for the **Query timeout (seconds)** value. Select **Next**:
 
     ```sql
     SELECT  P.ProductId,P.Seasonality,S.TransactionDateId,COUNT(*) as TransactionItemsCount
@@ -1827,31 +1827,41 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![The Azure Machine Learning Studio compute screen is displayed, with the compute instances tab selected, and the Create button highlighted.](media/aml_createcomputebutton.png "Azure Machine Learning Compute screen")
 
-3. On the **New compute instance** blade, configure it as follows, then select **Create**:
+3. On the **Create compute instance**, **Select virtual machine** form, configure it as follows, then select **Next**:
 
     | Field | Value |
     |--------------|---------------|
-    | Compute name | Globally unique value of your choice. |
-    | Virtual machine type | CPU (Central Processing Unit) |
-    | Virtual machine size | Standard_DS3_v2 |
+    | Virtual machine type | CPU |
+    | Virtual machine size | Search for and select Standard_DS3_v2. |
 
-    ![The new compute instance form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance form")
+    ![The new compute instance virtual machine form is displayed populated with the preceding values.](media/aml_newcomputeform.png "The new compute instance virtual machine form")
 
-4. Select the **Compute clusters** tab, and select **Create**.
+4. On the **Configure Settings** form, enter a globally unique **Compute name** of your choice, and select **Create**.
 
-5. On the **New compute cluster** form, configure the cluster as follows, then select **Create**:
+    ![The new compute instance settings form is displayed populated with a compute name](media/aml_newcomputeform_settings.png, "The new compute instance settings form")
+
+5. Select the **Compute clusters** tab, and select **Create**.
+
+6. On the **New compute cluster**, **Select virtual machine** form, configure the virtual machine as follows, then select **Next**:
+
+    | Field | Value |
+    |--------------|---------------|
+    | Virtual machine priority | Dedicated |
+    | Virtual machine type | CPU |
+    | Virtual machine size | Search for and select Standard_DS3_v2. |
+
+    ![The New compute cluster virtual machine form is displayed with the preceding values.](media/aml_cluster_settings.png "The New compute cluster virtual machine form")
+
+7. On the **Configure Settings** form, configure it as follows, then select **Create**:
 
     | Field | Value |
     |--------------|---------------|
     | Compute name | automlcluster |
-    | Virtual machine type | CPU (Central Processing Unit) |
-    | Virtual machine priority | Dedicated |
-    | Virtual machine size | Standard_DS3_v2 |
     | Minimum number of nodes | 0 |
     | Maximum number of nodes | 3 |
     | Idle seconds before scale down | 120 |
 
-    ![The New compute cluster form is displayed with the preceding values.](media/aml_cluster_settings.png "The New compute cluster form")
+    ![The new compute cluster configure settings form is displayed populated with the preceding values.](media/aml_cluster_configsettings.png "The new compute cluster Configure settings form")
 
 ### Task 3: Use a notebook in AML Studio to prepare data and create a Product Seasonality Classifier model using XGBoost
 
@@ -1865,9 +1875,9 @@ In this exercise, you will create multiple machine learning models. You will lea
 
     ![A dialog is displayed with the Overwrite if already exists and the I trust contents of this file checkboxes checked.](media/aml_notebook_uploadwarning.png "File upload warning dialog")
 
-4. In the top toolbar of the notebook, expand the **Jupyter** item, and select **Edit in Jupyter**.
+4. In the top toolbar of the notebook, expand the **Editors** item, and select **Edit in Jupyter**.
 
-    ![On the notebook toolbar, the Jupyter item is expanded with the Edit in Jupyter item selected.](media/aml_notebook_editinjupyter.png "Edit in Jupyter")
+    ![On the notebook toolbar, the Editors item is expanded with the Edit in Jupyter item selected.](media/aml_notebook_editinjupyter.png "Edit in Jupyter")
 
 5. Review and run each cell in the notebook individually to gain understanding of the functionality being demonstrated.
 
@@ -1908,7 +1918,6 @@ In this exercise, you will create multiple machine learning models. You will lea
     | Name | productseasonalityclassifier |
     | Description | Product Seasonality Classifier. |
     | Compute type | Azure Container Instance |
-    | Virtual machine size | Standard_DS3_v2 |
     | Enable authentication | Off |
 
     ![The Deploy a model blade is shown populated with the preceding values.](media/aml_automl_deploymodelaci.png "The Deploy a model blade")
@@ -1973,9 +1982,9 @@ Setting importance in Synapse SQL for Azure Synapse allows you to influence the 
 
 6. Next, you will flood the system with queries and see what happens for `asa.sql.workload01` and `asa.sql.workload02`. To do this, we'll run a Azure Synapse Pipeline that executes a large number of queries.
 
-7. Select the `Orchestrate` Tab.
+7. Select the `Integrate` item from the left menu.
 
-8. **Run** the **Exercise 8 - Execute Data Analyst and CEO Queries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries. You can run the pipeline with the Debug option if you have an instance of the Integration Runtime running.
+8. **Run** the **Exercise 8 - ExecuteDataAnalystandCEOQueries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries. You can run the pipeline with the Debug option if you have an instance of the Integration Runtime running.
 
 9. Select **Add trigger**, then **Trigger now**. In the dialog that appears, select **OK**. **Let this pipeline run for 30 seconds to 1 minute, then proceed to the next step**.
 
@@ -2017,9 +2026,9 @@ Setting importance in Synapse SQL for Azure Synapse allows you to influence the 
 
 16. Let's flood the system again with queries and see what happens this time for `asa.sql.workload01` and `asa.sql.workload02` queries. To do this, we'll run an Azure Synapse Pipeline that runs a large number queries. **Similar to before, run this pipeline for about 30 seconds to 1 minute**.
 
-    - **Select** the `Orchestrate` Tab.
+    - **Select** the `Integrate` item from the left menu.
 
-    - **Run** the **Exercise 8 - Execute Data Analyst and CEO Queries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries.
+    - **Run** the **Exercise 8 - ExecuteDataAnalystandCEOQueries** Pipeline, which will run the `asa.sql.workload01` and `asa.sql.workload02` queries.
 
 17. In the query window, replace the script with the following to see what happens to the `asa.sql.workload01` queries this time:
 
@@ -2097,7 +2106,7 @@ Users should avoid a workload management solution that configures 100% workload 
     ORDER BY submit_time, status
     ```
 
-9. Let's flood the system with queries and see what happens for `asa.sql.workload02`. To do this, we will run an Azure Synapse Pipeline that runs a large number of queries. Select the `Orchestrate` Tab. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run the  `asa.sql.workload02` queries. **Let this pipeline run for 30 seconds to 1 minute, then cancel the run recursively**.
+9. Let's flood the system with queries and see what happens for `asa.sql.workload02`. To do this, we will run an Azure Synapse Pipeline that runs a large number of queries. Select the `Integrate` item from the left menu. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run the  `asa.sql.workload02` queries. **Let this pipeline run for 30 seconds to 1 minute, then cancel the run recursively**.
 
 10. In the query window, replace the script with the following to see what happened to all the `asa.sql.workload02` queries that were flooded into the system:
 
@@ -2137,7 +2146,7 @@ Users should avoid a workload management solution that configures 100% workload 
     >
     > [Max Concurrency] = [CAP_PERCENTAGE_RESOURCE] / [REQUEST_MIN_RESOURCE_GRANT_PERCENT]
 
-13. Let's flood the system again and see what happens for `asa.sql.workload02`. To do this, we will run an Azure Synapse Pipeline that runs a large number of queries. Select the `Orchestrate` Tab. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run the `asa.sql.workload02` queries.
+13. Let's flood the system again and see what happens for `asa.sql.workload02`. To do this, we will run an Azure Synapse Pipeline that runs a large number of queries. Select the `Integrate` item from the left menu. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run the `asa.sql.workload02` queries.
 
 14. In the query window, replace the script with the following to see what happened to all of the `asa.sql.workload02` queries that flooded the system, note that many more queries are now being performed in parallel for asa.sql.workload02:
 
@@ -2182,7 +2191,7 @@ All logins to your data warehouse are logged to `sys.dm_pdw_exec_sessions`. This
 
 5. Select **Run** from the toolbar menu to execute the SQL command.
 
-6. Let's flood the system with queries to create operations to monitor. To do this, we will run a Azure Synapse Pipeline which triggers queries. Select the `Orchestrate` Tab. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run / trigger  `asa.sql.workload02` queries. **Let this pipeline run for 30 seconds to 1 minute, then cancel the run recursively**.
+6. Let's flood the system with queries to create operations to monitor. To do this, we will run a Azure Synapse Pipeline which triggers queries. Select the `Integrate` item from the left menu. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline, which will run / trigger  `asa.sql.workload02` queries. **Let this pipeline run for 30 seconds to 1 minute, then cancel the run recursively**.
 
 7. In the query window, replace the script with the following:
 
@@ -2244,7 +2253,7 @@ All logins to your data warehouse are logged to `sys.dm_pdw_exec_sessions`. This
 
 ### Task 4: Orchestration Monitoring with the Monitor Hub
 
-1. Let's run a pipeline to monitor its execution in the next step. To do this, select the `Orchestrate` Tab. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline.
+1. Let's run a pipeline to monitor its execution in the next step. To do this, select the `Integrate` item from the left menu. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline.
 
     ![The add trigger and trigger now menu items are highlighted.](media/ex7-task4-01.png "Add trigger")
 
@@ -2258,7 +2267,7 @@ All logins to your data warehouse are logged to `sys.dm_pdw_exec_sessions`. This
 
 ### Task 5: Monitoring SQL Requests with the Monitor Hub
 
-1. Let's run a pipeline to monitor its execution in the next step. To do this, select the `Orchestrate` Tab. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline.
+1. Let's run a pipeline to monitor its execution in the next step. To do this, select the `Integrate` item from the left menu. **Run** the **Exercise 8 - Execute Business Analyst Queries** Pipeline.
 
     ![The add trigger and trigger now menu items are highlighted.](media/ex7-task5-01.png "Add trigger")
 
