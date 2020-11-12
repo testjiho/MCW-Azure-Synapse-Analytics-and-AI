@@ -1186,7 +1186,7 @@ In this exercise you will create a Synapse Pipeline that will orchestrate updati
 
     ![The Debug Configuration selection is shown with Python File - Debug the currently active Python File highlighted.](media/ex5-task2a-08.png "Debug Configuration selection")
 
-20. This process will take up to a few minutes to complete. When it completes, you should see an output similar to what is seen in the screenshot below. The output should also contain a modelId. Copy and paste this value into your text file to use later
+20. This process will take a few minutes to complete. When it completes, you should see an output similar to what is seen in the screenshot below. The output should also contain a modelId. Copy and paste this value into your text file to use later
 
     ![A sample output of the python script is shown with a modelId value highlighted.](media/ex5-task2a-09.png "Visual Studio Code output window")
 
